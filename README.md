@@ -1,2 +1,9 @@
-# RAIN-SENSOR
-Resistive rain sensors measure changes in electrical resistance across exposed parallel copper or nickel traces. In a dry state, the air gap between the traces creates an open circuit with near-infinite resistance. When liquid water lands on the grid, it bridges the gap and acts as a conductor, causing an immediate drop in Resistive rain sensors me
+# Wokwi project
+
+This is a Wokwi project. Please edit this README file and add a description of your project.
+
+## Usage
+
+1. Add parts by clicking the blue "+" button in the diagram editor
+2. Connect parts by dragging wires between them
+3. Click the green play button to start the simulation

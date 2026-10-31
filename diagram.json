@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Nurul Airina Najihah Binti Mohd Zain",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -127.8, "left": 31.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 135, "left": 85.8, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 60.8,
+      "left": -229.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -160.8,
+      "left": 126.6,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -72.85,
+      "left": 124.8,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -28.5, "left": 426.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 198.4,
+      "left": -378.4,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -186,
+      "left": 186.2,
+      "attrs": { "color": "purple" }
+    }
+  ],
+  "connections": [
+    [ "r1:1", "bz1:1", "green", [ "v0" ] ],
+    [ "r1:2", "bb1:13t.a", "green", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v163.2", "h57.6" ] ],
+    [ "bz1:2", "uno:8", "green", [ "v153.6", "h105.2" ] ],
+    [ "ldr1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:VCC", "bb1:bp.1", "red", [ "h67.2", "v-48" ] ],
+    [ "lcd1:VCC", "bb1:bp.2", "red", [ "h-19.2", "v-191.9", "h470.4" ] ],
+    [ "ldr1:DO", "bb1:bn.2", "cyan", [ "h0" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-48", "v201.6", "h672" ] ],
+    [ "lcd1:SDA", "uno:A4.2", "gold", [ "h-38.4", "v163.4", "h489.6", "v-288", "h105.6" ] ],
+    [ "lcd1:SCL", "uno:A5.2", "magenta", [ "h-19.2", "v134.7", "h451.2", "v-259.2" ] ],
+    [ "dht1:SDA", "uno:3", "green", [ "v28.8", "h-134.3" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v259.2", "h-163.2" ] ],
+    [ "bb1:tn.25", "uno:GND.3", "black", [ "v-0.1", "h164.8", "v470.4", "h-230.4" ] ],
+    [ "dht1:GND", "uno:GND.2", "black", [ "v288", "h-211.2" ] ],
+    [ "bb1:tp.24", "uno:VIN", "orange", [ "v0.3", "h203.2", "v508.8", "h-259.2" ] ],
+    [ "led1:A", "dht1:VCC", "green", [ "v9.6", "h182.4", "v201.6" ] ],
+    [ "led1:C", "bz1:2", "green", [ "v0" ] ],
+    [ "r1:1", "bb1:8t.b", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:14t.b", "", [ "$bb" ] ],
+    [ "bz1:1", "bb1:11t.a", "", [ "$bb" ] ],
+    [ "bz1:2", "bb1:12t.a", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
